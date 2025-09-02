@@ -340,8 +340,7 @@
             <div class="flex">
                 <div
                     class="max-h-[650px] max-w-[850px] overflow-hidden rounded-lg shadow-lg shadow-[rgba(170,49,233,0.44021358543417366)]">
-                    <img src="./assets/images/home/insights.png" alt="coding"
-                        class="h-full w-full object-cover" />
+                    <img src="./assets/images/home/insights.png" alt="coding" class="h-full w-full object-cover" />
                 </div>
             </div>
         </div>
@@ -491,8 +490,7 @@
                     <li>Lorem, ipsum dolor.</li>
                     <li>Lorem ipsum dolor sit.</li>
                 </ul>
-                <a href="http://"
-                    class="btn mt-8 !w-full transition-transform duration-[0.3s] hover:scale-x-[1.02]">
+                <a href="http://" class="btn mt-8 !w-full transition-transform duration-[0.3s] hover:scale-x-[1.02]">
                     Get now
                 </a>
             </div>
@@ -513,8 +511,7 @@
                     <li>Lorem, ipsum dolor.</li>
                     <li>Lorem ipsum dolor sit.</li>
                 </ul>
-                <a href="http://"
-                    class="btn mt-8 !w-full transition-transform duration-[0.3s] hover:scale-x-[1.02]">
+                <a href="http://" class="btn mt-8 !w-full transition-transform duration-[0.3s] hover:scale-x-[1.02]">
                     Get now
                 </a>
             </div>
@@ -535,16 +532,14 @@
                     <li>Lorem, ipsum dolor.</li>
                     <li>Lorem ipsum dolor sit.</li>
                 </ul>
-                <a href="http://"
-                    class="btn mt-8 !w-full transition-transform duration-[0.3s] hover:scale-x-[1.02]">
+                <a href="http://" class="btn mt-8 !w-full transition-transform duration-[0.3s] hover:scale-x-[1.02]">
                     Get now
                 </a>
             </div>
         </div>
     </section>
 
-    <section
-        class="mt-5 flex min-h-[80vh] w-full flex-col place-content-center place-items-center p-[2%] max-lg:p-3">
+    <section class="mt-5 flex min-h-[80vh] w-full flex-col place-content-center place-items-center p-[2%] max-lg:p-3">
         <h3 class="reveal-up text-center text-4xl font-medium max-md:text-2xl">
             Read our articles ✨
         </h3>
@@ -740,4 +735,8 @@
             </div>
         </div>
     </footer>
+    <x-filament-actions::modals />
+    @livewire('notifications')
+    @livewireScripts
+    @filamentScripts
 </x-layouts.app>
