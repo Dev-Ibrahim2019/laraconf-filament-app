@@ -21,8 +21,9 @@ class AttendeeFactory extends Factory
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
             'ticket_cost' => fake()->numberBetween(50, 500),
-            'is_paid' => fake()->boolean(70),
-            'conference_id' => Conference::factory(),
+            'is_paid' => 'true',
+            // 'conference_id' => Conference::factory(),
+            'created_at' => fake()->dateTimeBetween('-3 months', 'now')
         ];
     }
 }
