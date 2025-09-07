@@ -20,12 +20,15 @@ use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
+use UnitEnum;
 
 class SpeakerResource extends Resource
 {
     protected static ?string $model = Speaker::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::Microphone;
+    protected static UnitEnum|string|null $navigationGroup = 'Second Group';
+
+    // protected static string|BackedEnum|null $navigationIcon = Heroicon::Microphone;
 
     protected static ?string $recordTitleAttribute = 'name';
 

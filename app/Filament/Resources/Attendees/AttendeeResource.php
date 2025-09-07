@@ -15,16 +15,37 @@ use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Model;
+use UnitEnum;
 
 class AttendeeResource extends Resource
 {
     protected static ?string $model = Attendee::class;
 
+    protected static UnitEnum|string|null $navigationGroup = 'First Group';
+
     protected static ?int $navigationSort = 5;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::UserGroup;
+    // protected static string|BackedEnum|null $navigationIcon = Heroicon::UserGroup;
 
     protected static ?string $recordTitleAttribute = 'name';
+
+    public static function getNavigationBadge(): ?string
+    {
+        return 'New';
+    }
+
+    public static function getNavigationBadgeColor(): string|array|null
+    {
+        return 'success';
+    }
+
+    public static function getGlobalSearchResultDetails(Model $record): array
+    {
+       return [
+            'Conference' => $record->conference->name,
+       ];
+    }
 
     public static function form(Schema $schema): Schema
     {
